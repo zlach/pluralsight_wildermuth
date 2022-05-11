@@ -1,0 +1,67 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\" />
+    <Content Remove="wwwroot\img\SK-A-2344.jpg" />
+    <Content Remove="wwwroot\img\SK-A-2860.jpg" />
+    <Content Remove="wwwroot\img\SK-A-3262.jpg" />
+    <Content Remove="wwwroot\img\SK-A-4050.jpg" />
+    <Content Remove="wwwroot\img\SK-A-4674.jpg" />
+    <Content Remove="wwwroot\img\SK-A-4691.jpg" />
+    <Content Remove="wwwroot\img\SK-A-4885.jpg" />
+    <Content Remove="wwwroot\img\SK-A-5033.jpg" />
+    <Content Remove="wwwroot\img\VanGogh.jpg" />
+    <Content Remove="wwwroot\img\" />
+    <Content Remove="wwwroot\css\" />
+    <Content Remove="wwwroot\js\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+    <Folder Include="wwwroot\img\" />
+    <Folder Include="wwwroot\css\" />
+    <Folder Include="wwwroot\js\" />
+    <Folder Include="Controllers\" />
+    <Folder Include="Views\" />
+    <Folder Include="Views\App\" />
+    <Folder Include="Views\Shared\" />
+    <Folder Include="Pages\" />
+    <Folder Include="ViewModels\" />
+    <Folder Include="Services\" />
+    <Folder Include="Data\" />
+    <Folder Include="Data\Entities\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="jQuery" />
+    <None Remove="Controllers\" />
+    <None Remove="Views\" />
+    <None Remove="Views\App\" />
+    <None Remove="Views\Shared\" />
+    <None Remove="Pages\" />
+    <None Remove="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" />
+    <None Remove="ViewModels\" />
+    <None Remove="Services\" />
+    <None Remove="Microsoft.EntityFrameworkCore.Sqlite.Core" />
+    <None Remove="Data\" />
+    <None Remove="Data\Entities\" />
+    <None Remove="MongoDB.Driver" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="wwwroot\img\SK-A-2344.jpg" />
+    <None Include="wwwroot\img\SK-A-2860.jpg" />
+    <None Include="wwwroot\img\SK-A-3262.jpg" />
+    <None Include="wwwroot\img\SK-A-4050.jpg" />
+    <None Include="wwwroot\img\SK-A-4674.jpg" />
+    <None Include="wwwroot\img\SK-A-4691.jpg" />
+    <None Include="wwwroot\img\SK-A-4885.jpg" />
+    <None Include="wwwroot\img\SK-A-5033.jpg" />
+    <None Include="wwwroot\img\VanGogh.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="3.1.10" />
+    <PackageReference Include="MongoDB.Driver" Version="2.15.1" />
+  </ItemGroup>
+</Project>
