@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DutchTreat.Data
+namespace DutchTreat.Data.Entities
 {
     public class Order
     {

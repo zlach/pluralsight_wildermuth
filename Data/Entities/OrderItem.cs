@@ -1,7 +1,7 @@
 ﻿using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 
-namespace DutchTreat.Data
+namespace DutchTreat.Data.Entities
 {
     public class OrderItem
     {

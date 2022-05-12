@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.Extensions.Options;
 using MongoDB.Driver;
+using DutchTreat.Data.Entities;
 
 namespace DutchTreat.Data
 {
@@ -10,7 +11,10 @@ namespace DutchTreat.Data
         private MongoClient _mongoClient { get; set; }
         public IClientSessionHandle Session { get; set; }
 
-		public DutchContext(IOptions<DutchTreatDatabaseSettings> configuration)
+        public IMongoCollection<Product> Products { get; set; }
+        public IMongoCollection<Order> Orders { get; set; }
+
+        public DutchContext(IOptions<DutchTreatDatabaseSettings> configuration)
 		{
             _mongoClient = new MongoClient(configuration.Value.ConnectionString);
             _db = _mongoClient.GetDatabase(configuration.Value.DatabaseName);
