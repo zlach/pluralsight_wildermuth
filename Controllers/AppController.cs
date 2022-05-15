@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Mvc;
 using DutchTreat.ViewModels;
 using DutchTreat.Services;
 using DutchTreat.Data;
+using DutchTreat.Data.Entities;
+using MongoDB.Driver;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -14,12 +16,12 @@ namespace DutchTreat.Controllers
     public class AppController : Controller
     {
         private readonly IMailService _mailService;
-        private readonly DutchContext _context;
+        private readonly IDutchRepository _repository;
 
-        public AppController(IMailService mailService, DutchContext context)
+        public AppController(IMailService mailService, IDutchRepository repository)
         {
             _mailService = mailService;
-            _context = context;
+            _repository = repository;
         }
 
         // GET: /<controller>/
@@ -56,11 +58,11 @@ namespace DutchTreat.Controllers
             return View();
         }
 
-        public IActionResult Shop()
+        public async Task<IActionResult> Shop() // TODO how do I know what I prefer to return here?
         {
-            var results = _context.Products;
+            var products = await _repository.GetAllProducts();
 
-            return View(results);
+            return View(products);
         }
     }
 }

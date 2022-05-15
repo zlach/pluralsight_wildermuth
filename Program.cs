@@ -26,14 +26,14 @@ namespace DutchTreat
                     webBuilder.UseStartup<Startup>();
                 });
 
-        private static void AddConfiguration(HostBuilderContext ctxt, IConfigurationBuilder bldr)
-        {
-            bldr.Sources.Clear();
+        //private static void AddConfiguration(HostBuilderContext ctxt, IConfigurationBuilder bldr)
+        //{
+        //    bldr.Sources.Clear();
 
-            bldr.SetBasePath(Directory.GetCurrentDirectory())
-                .AddJsonFile("config.json")
-                .AddEnvironmentVariables();
-        }
+        //    bldr.SetBasePath(Directory.GetCurrentDirectory())
+        //        .AddJsonFile("config.json")
+        //        .AddEnvironmentVariables();
+        //}
     }
 }
 

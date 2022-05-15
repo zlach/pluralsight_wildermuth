@@ -34,8 +34,11 @@ namespace DutchTreat
 
             services.AddSingleton<IDutchContext, DutchContext>();
 
+            services.AddScoped<IDutchRepository, DutchRepository>();
+
             services.AddControllersWithViews()
                 .AddRazorRuntimeCompilation();
+
 
             services.AddRazorPages();
         }

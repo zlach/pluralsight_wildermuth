@@ -7,8 +7,8 @@ namespace DutchTreat.Data
 
         public string DatabaseName { get; set; }
 
-        public string ProductsCollectionName { get; set; }
+        //public string ProductsCollectionName { get; set; }
 
-        public string OrdersCollectionName { get; set; }
+        //public string OrdersCollectionName { get; set; }
     }
 }
